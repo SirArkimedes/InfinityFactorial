@@ -109,11 +109,11 @@ namespace Ch16Smp1
       // memorySizeLabel
       // 
       this.memorySizeLabel.AutoSize = true;
-      this.memorySizeLabel.Location = new System.Drawing.Point(89, 525);
+      this.memorySizeLabel.Location = new System.Drawing.Point(6, 523);
       this.memorySizeLabel.Name = "memorySizeLabel";
-      this.memorySizeLabel.Size = new System.Drawing.Size(159, 15);
+      this.memorySizeLabel.Size = new System.Drawing.Size(321, 15);
       this.memorySizeLabel.TabIndex = 6;
-      this.memorySizeLabel.Text = "Memory Size of array (bytes)";
+      this.memorySizeLabel.Text = "Size of the array (Digits in number - Includes leading zeros)";
       // 
       // memorySizeDisplay
       // 
@@ -176,9 +176,8 @@ namespace Ch16Smp1
 
         Factorial(n);
         displayTextBox.Text = PrintList();
-
-        int size = sizeof(uint) * result.Count;
-        memorySizeDisplay.Text = string.Format("{0}", size);
+        
+        memorySizeDisplay.Text = string.Format("{0}", result.Count);
 
         valueETextBox.SelectAll();
         valueETextBox.Select();
